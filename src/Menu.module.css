@@ -1,0 +1,212 @@
+/* Menu.module.css */
+
+.menuRoot {
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 60px 0 60px;
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  z-index: 1000;
+  background-color: #401D19;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #FF682C;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-right: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.menu a {
+  color: #FF682C;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  padding: 0 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.menu a:hover, .menu a:focus {
+  color: #fff;
+  background: none;
+}
+
+.contactBtn {
+  background-color: #8B4A41;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.contactBtn:hover {
+  background: #FF682C;
+  opacity: 0.9;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+  font-size: 13px;
+  color: #FF682C;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdownPanel {
+  height: 90vh;
+  position: fixed;
+  top: 80px; /* Adjust to match actual navbar height */
+  left: 0;
+  width: 100vw;
+  background: #401D19;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 1100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.dropdownPanelActive {
+  transform: translateY(0);
+}
+
+.bottomLeftContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottomLeftContent h2 {
+    font-weight: 300;
+    color: rgb(255, 104, 44);
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.bookBtn {
+    background-color: rgb(255, 104, 44);
+    color: #EDD0C6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: padding 0.3s;
+}
+
+.bookBtn:hover {
+    padding: 10px 25px;
+}
+
+.dropdownSubpanel {
+  height: 80vh;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100vw;
+  background: #331613;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out 0.1s;
+  z-index: 1200;
+  padding: 40px;
+  color: #FF682C;
+}
+
+.dropdownSubpanelActive {
+  transform: translateY(0);
+}
+
+.subpanelBlocks {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 90%;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.subpanelBlock {
+    flex: 1;
+    border: 0.1px solid #84413a;
+    background-color: #401D19;
+    color: #FF682C;
+    padding: 24px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    min-height: 180px;
+}
+
+.subpanelBlock:hover {
+    background-color: #512520;
+}
+
+.subpanelBlock h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(237, 208, 198);
+    font-family: Poppins;
+}
+
+.subpanelBlock img {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(61%) sepia(75%) saturate(445%) hue-rotate(340deg) brightness(98%) contrast(98%);
+}
+
+.bgAnimation {
+    width: 100%;
+}
+
+.animContainer {
+    width: 100%;
+    height: 100%;
+} 

@@ -1,0 +1,99 @@
+/* StackingCards.module.css */
+
+.stackingCardsRoot {
+  height: 100vh;
+  background-color: #401D19;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  margin-top: 200px;
+  width: 80%;
+  left: 5%;
+  top: 100px;
+  height: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #1a0000;
+  box-shadow: 0 0 40px #ff6a00aa;
+  color: #fff0e5;
+  transform: translateY(100vh) scale(0.95);
+  transition: transform 1.2s cubic-bezier(.77, 0, .18, 1), z-index 0s, opacity 0.8s;
+  z-index: 0;
+  opacity: 0;
+}
+
+.cardVisible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  z-index: 100;
+}
+
+.cardBehind {
+  opacity: 0.7;
+  transform: translateY(30px) scale(0.96);
+  z-index: 50;
+}
+
+.cardPeek {
+  opacity: 1;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.cardTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff8442;
+  margin-bottom: 15px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cardStackHint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to bottom, #1a0000cc, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.infoBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.info {
+  background-color: #4c1e1e;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #ffd8a8;
+  border: 1px solid #6c2d1f;
+}
+
+.info:hover {
+  background: #1a0000;
+} 
